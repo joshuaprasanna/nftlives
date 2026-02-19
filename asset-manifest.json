@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/nftlives/static/js/main.60073f25.js",
-    "static/media/NFT logo.jpg": "/nftlives/static/media/NFT logo.9924578fd2deffd9b4ba.jpg",
-    "static/media/img7.jpeg": "/nftlives/static/media/img7.bb016564a501cfb58193.jpeg",
-    "static/media/img3.jpeg": "/nftlives/static/media/img3.67c74cf9aaa2f92d7313.jpeg",
-    "static/media/founder.jpg": "/nftlives/static/media/founder.0dcf883ed51137dcc5ae.jpg",
-    "static/media/img2.jpeg": "/nftlives/static/media/img2.eaee3610e1ff75e3c8cb.jpeg",
-    "static/media/img4.jpeg": "/nftlives/static/media/img4.ff7211de5cb251faea0f.jpeg",
-    "static/media/img6.jpeg": "/nftlives/static/media/img6.acc3f477795be9330543.jpeg",
-    "static/media/img5.jpeg": "/nftlives/static/media/img5.9c1bff4d92a90ffbdb49.jpeg",
-    "index.html": "/nftlives/index.html",
-    "main.60073f25.js.map": "/nftlives/static/js/main.60073f25.js.map"
+    "main.js": "/static/js/main.ce021a47.js",
+    "static/media/NFT logo.jpg": "/static/media/NFT logo.9924578fd2deffd9b4ba.jpg",
+    "static/media/img7.jpeg": "/static/media/img7.bb016564a501cfb58193.jpeg",
+    "static/media/img3.jpeg": "/static/media/img3.67c74cf9aaa2f92d7313.jpeg",
+    "static/media/founder.jpg": "/static/media/founder.0dcf883ed51137dcc5ae.jpg",
+    "static/media/img2.jpeg": "/static/media/img2.eaee3610e1ff75e3c8cb.jpeg",
+    "static/media/img4.jpeg": "/static/media/img4.ff7211de5cb251faea0f.jpeg",
+    "static/media/img6.jpeg": "/static/media/img6.acc3f477795be9330543.jpeg",
+    "static/media/img5.jpeg": "/static/media/img5.9c1bff4d92a90ffbdb49.jpeg",
+    "index.html": "/index.html",
+    "main.ce021a47.js.map": "/static/js/main.ce021a47.js.map"
   },
   "entrypoints": [
-    "static/js/main.60073f25.js"
+    "static/js/main.ce021a47.js"
   ]
 }
