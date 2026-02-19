@@ -163,8 +163,7 @@ import { useNavigate } from 'react-router-dom';
 
 const slides = [
   {
-    image:
-      'https://images.unsplash.com/photo-1600150806237-a7dffed6b53c?auto=format&fit=crop&w=1920&q=90',
+    image: '/images/pillalu.jpg',
     heading: 'Welcome to',
     title: 'New Foundation Trust',
     subtitle: 'Serving God • Serving People • Transforming Lives',

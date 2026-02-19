@@ -1,138 +1,8 @@
-// import React, { useState } from 'react';
-// import { motion } from 'framer-motion';
-// import { FaPrayingHands, FaChild, FaFemale, FaUsers } from 'react-icons/fa';
-// //import './ChurchMinistriesPage.css'; // You can move inline styles to this if needed
 
-// const ministries = [
-//   {
-//     title: 'Church Ministry',
-//     icon: <FaPrayingHands size={40} />,
-//     description: 'Empowering believers through prayer, worship, and teaching of the Word of God.',
-//     image: 'https://images.unsplash.com/photo-1548625149-fc4a29cf7092?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2h1cmNoJTIwYnVpbGRpbmd8ZW58MHx8MHx8fDA%3Ds',
-//   },
-//   {
-//     title: 'Children\'s Home',
-//     icon: <FaChild size={40} />,
-//     description: 'Nurturing orphans with love, care, education, and spiritual guidance.',
-//     image: 'https://media.istockphoto.com/id/143922546/photo/group-of-african-orphan-children.jpg?s=612x612&w=0&k=20&c=RpKm-4iCJGJ_6ukzmMDxk1lTXhGp7VoYchb_sBLKqtY=',
-//   },
-//   {
-//     title: 'Bible School',
-//     icon: <FaUsers size={40} />,
-//     description: 'Training future leaders and ministers with solid biblical foundation.',
-//     image: 'https://media.istockphoto.com/id/175408075/photo/childrens-religious-program.jpg?s=612x612&w=0&k=20&c=vKnzWEXGXvLdDu4X86CWJ5aee5cLmQat4GUMWIWT73Q=',
-//   },
-//   {
-//     title: 'Outreach Ministry',
-//     icon: <FaFemale size={40} />,
-//     description: 'Reaching the unreached with the Gospel through missions and local outreach.',
-//     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB3-nqwrK_0LhsPROEgSQl2h85l1Lt2aFsXQzoFDINOVa4ExsGEN_fuOc51jRhPE_cmms&usqp=CAU',
-//   },
-// ];
-
-// const ChurchMinistriesPage = () => {
-//   const [activeIndex, setActiveIndex] = useState(0);
-
-//   return (
-//     <div style={{ background: 'linear-gradient(to right,rgb(83, 148, 92), #fff)', minHeight: '100vh', padding: '60px 20px' }}>
-//       <motion.h2
-//         initial={{ opacity: 0, y: -30 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 1 }}
-//         style={{
-//           textAlign: 'center',
-//           fontSize: '3rem',
-//           color: '#8c6239',
-//           fontFamily: 'Georgia, serif',
-//           marginBottom: '40px',
-//           textShadow: '1px 1px #ccc',
-//         }}
-//       >
-//         Our Ministries
-//       </motion.h2>
-
-//       {/* Tabs */}
-//       <div style={{
-//         display: 'flex',
-//         justifyContent: 'center',
-//         flexWrap: 'wrap',
-//         gap: '20px',
-//         marginBottom: '40px'
-//       }}>
-//         {ministries.map((ministry, index) => (
-//           <motion.button
-//             key={index}
-//             whileHover={{ scale: 1.05 }}
-//             whileTap={{ scale: 0.95 }}
-//             onClick={() => setActiveIndex(index)}
-//             style={{
-//               border: 'none',
-//               borderRadius: '20px',
-//               padding: '15px 25px',
-//               background: index === activeIndex ? '#b38728' : '#f0e4d7',
-//               color: index === activeIndex ? '#fff' : '#444',
-//               cursor: 'pointer',
-//               fontSize: '1rem',
-//               boxShadow: '0 6px 12px rgba(0,0,0,0.1)',
-//               transition: 'all 0.3s ease',
-//             }}
-//           >
-//             {ministry.icon} <br />
-//             {ministry.title}
-//           </motion.button>
-//         ))}
-//       </div>
-
-//       {/* Display Area */}
-//       <motion.div
-//         key={activeIndex}
-//         initial={{ opacity: 0, y: 30 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 0.7 }}
-//         style={{
-//           maxWidth: '900px',
-//           margin: '0 auto',
-//           background: '#fff',
-//           borderRadius: '24px',
-//           boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-//           overflow: 'hidden',
-//           display: 'flex',
-//           flexWrap: 'wrap',
-//         }}
-//       >
-//         <div style={{ flex: '1 1 300px' }}>
-//           <img
-//             src={ministries[activeIndex].image}
-//             alt={ministries[activeIndex].title}
-//             style={{
-//               width: '100%',
-//               height: '100%',
-//               objectFit: 'cover',
-//               borderTopLeftRadius: '24px',
-//               borderBottomLeftRadius: '24px',
-//             }}
-//           />
-//         </div>
-//         <div style={{
-//           flex: '2 1 400px',
-//           padding: '30px',
-//           fontFamily: 'Verdana, sans-serif'
-//         }}>
-//           <h3 style={{ color: '#b38728', fontSize: '2rem', marginBottom: '20px' }}>
-//             {ministries[activeIndex].title}
-//           </h3>
-//           <p style={{ fontSize: '1.1rem', color: '#444', lineHeight: '1.7' }}>
-//             {ministries[activeIndex].description}
-//           </p>
-//         </div>
-//       </motion.div>
-//     </div>
-//   );
-// };
-
-// export default ChurchMinistriesPage;
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+
+
 
 const ministries = [
   {
@@ -151,8 +21,9 @@ const ministries = [
   {
     title: 'Ratna Children’s Home',
     subtitle: 'Giving Children Hope, Dignity, and a Future',
-    image:
-      'https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1200&q=80',
+    
+    image: '/images/ratna.jpg',
+
     content: [
       'Ratna Children’s Home was established with a compassionate vision to care for poor and destitute children.',
       'We provide food, shelter, education, healthcare, emotional care, and spiritual guidance.',
