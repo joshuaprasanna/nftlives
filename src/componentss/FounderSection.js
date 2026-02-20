@@ -4,6 +4,8 @@ import founderImg from './founder.jpg';
 const Founder = () => {
   return (
     <section className="founder-section">
+      <div className="color-bg"></div>
+
       <div className="founder-wrapper">
 
         {/* IMAGE SIDE */}
@@ -16,7 +18,7 @@ const Founder = () => {
           </div>
         </div>
 
-        {/* CONTENT SIDE */}
+        {/* TEXT SIDE */}
         <div className="text-col">
           <span className="trust-name">New Foundation Trust</span>
 
@@ -55,104 +57,105 @@ const Founder = () => {
 
       </div>
 
-      {/* STYLES */}
       <style>{`
         .founder-section {
-          padding: 120px 20px;
-          background: linear-gradient(180deg, #f8fafc, #ffffff);
-          font-family: 'Poppins', 'Inter', sans-serif;
-          display: flex;
-          justify-content: center;
+          position: relative;
+          padding: 130px 20px;
+          font-family: 'Poppins', sans-serif;
+          overflow: hidden;
+        }
+
+        /* 🌈 COLORFUL BACKGROUND */
+        .color-bg {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(135deg, #6366f1, #ec4899, #22c55e);
+          opacity: 0.08;
+          top: 0;
+          left: 0;
         }
 
         .founder-wrapper {
           max-width: 1150px;
-          width: 100%;
+          margin: auto;
           display: grid;
-          grid-template-columns: 360px 1fr;
-          gap: 70px;
+          grid-template-columns: 380px 1fr;
+          gap: 80px;
           align-items: center;
-        }
-
-        /* IMAGE COLUMN */
-        .image-col {
-          display: flex;
-          justify-content: center;
-        }
-
-        .image-shell {
-          width: 230px;
-          padding: 14px;
-          background: #ffffff;
-          border-radius: 22px;
-          box-shadow: 
-            0 30px 60px rgba(0,0,0,0.18),
-            inset 0 0 0 1px rgba(0,0,0,0.04);
           position: relative;
+          z-index: 2;
+        }
+
+        /* IMAGE */
+        .image-shell {
+          padding: 16px;
+          border-radius: 24px;
+          background: linear-gradient(135deg, #6366f1, #ec4899);
+          box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+          transition: 0.4s;
+        }
+
+        .image-shell:hover {
+          transform: translateY(-12px) rotate(-1deg) scale(1.03);
         }
 
         .image-shell img {
           width: 100%;
-          border-radius: 16px;
-          object-fit: cover;
-          filter: contrast(1.02) saturate(1.05);
+          border-radius: 18px;
+          border: 4px solid white;
         }
 
         .image-caption {
-          position: absolute;
-          bottom: -18px;
-          left: 50%;
-          transform: translateX(-50%);
-          background: linear-gradient(135deg, #0f172a, #1e3a8a);
-          color: #fff;
+          margin-top: 12px;
+          text-align: center;
           font-size: 13px;
           font-weight: 600;
-          padding: 7px 22px;
-          border-radius: 22px;
-          letter-spacing: 0.4px;
-          box-shadow: 0 10px 30px rgba(30,58,138,0.45);
+          color: white;
+          background: linear-gradient(90deg, #22c55e, #06b6d4);
+          padding: 8px;
+          border-radius: 20px;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
 
-        /* TEXT COLUMN */
-        .text-col {
-          color: #1f2937;
-        }
-
+        /* TEXT */
         .trust-name {
           font-size: 13px;
+          letter-spacing: 3px;
           text-transform: uppercase;
-          letter-spacing: 2.5px;
-          color: #1e40af;
-          font-weight: 600;
+          background: linear-gradient(90deg, #6366f1, #ec4899);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: 700;
         }
 
         .founder-name {
-          font-family: 'Georgia', 'Times New Roman', serif;
-          font-size: 40px;
-          font-weight: 700;
-          margin: 18px 0 28px;
-          color: #0f172a;
-          line-height: 1.25;
+          font-size: 44px;
+          font-family: 'Georgia', serif;
+          margin: 15px 0 20px;
+          background: linear-gradient(90deg, #1e3a8a, #ec4899);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
 
         .text-col p {
           font-size: 16px;
-          line-height: 1.95;
+          line-height: 1.9;
           margin-bottom: 18px;
           color: #374151;
         }
 
         .text-col strong {
-          color: #1e40af;
-          font-weight: 600;
+          color: #ec4899;
         }
 
         .family-note {
-          margin-top: 30px;
-          padding-top: 22px;
-          border-top: 1px solid rgba(0,0,0,0.08);
+          margin-top: 25px;
+          padding: 15px;
+          border-left: 4px solid #6366f1;
+          background: #f9fafb;
+          border-radius: 10px;
           font-style: italic;
-          color: #475569;
         }
 
         /* MOBILE */
@@ -160,7 +163,6 @@ const Founder = () => {
           .founder-wrapper {
             grid-template-columns: 1fr;
             text-align: center;
-            gap: 55px;
           }
 
           .founder-name {

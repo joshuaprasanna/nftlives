@@ -4,14 +4,19 @@ import { motion } from 'framer-motion';
 const MissionStatement = () => {
   return (
     <section className="mission-section">
+      
+      {/* 🌈 BACKGROUND GLOW */}
+      <div className="bg-blur one"></div>
+      <div className="bg-blur two"></div>
+
       <motion.div
         className="mission-highlight"
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        <span className="mission-label">Our Mission</span>
+        <span className="mission-label">✨ Our Mission</span>
 
         <h2 className="mission-title">
           Serving God by Transforming Lives
@@ -47,56 +52,82 @@ const MissionStatement = () => {
         </div>
       </motion.div>
 
-      {/* STYLES */}
+      {/* 🎨 STYLES */}
       <style>{`
         .mission-section {
+          position: relative;
           padding: 120px 20px;
-          background: #ffffff;
-          font-family: 'Inter', 'Poppins', sans-serif;
+          background: linear-gradient(135deg, #0f172a, #1e3a8a, #065f46);
+          overflow: hidden;
+          font-family: 'Poppins', sans-serif;
         }
 
-        /* 🔥 HIGHLIGHT BACKGROUND */
+        /* 🌈 BLUR BACKGROUND EFFECT */
+        .bg-blur {
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          filter: blur(120px);
+          opacity: 0.6;
+          z-index: 0;
+        }
+
+        .bg-blur.one {
+          background: #22c55e;
+          top: -80px;
+          left: -80px;
+        }
+
+        .bg-blur.two {
+          background: #f59e0b;
+          bottom: -80px;
+          right: -80px;
+        }
+
+        /* 🔥 MAIN CARD */
         .mission-highlight {
+          position: relative;
+          z-index: 2;
           max-width: 950px;
           margin: 0 auto;
           padding: 70px 60px;
-          background: linear-gradient(
-            135deg,
-            #ecfdf5 0%,
-            #f0fdfa 50%,
-            #ffffff 100%
-          );
           border-radius: 28px;
-          box-shadow: 0 30px 80px rgba(0,0,0,0.08);
-          border-left: 6px solid #059669;
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(20px);
+          border: 1px solid rgba(255,255,255,0.2);
+          box-shadow: 0 25px 80px rgba(0,0,0,0.4);
+          color: #fff;
         }
 
         .mission-label {
           font-size: 14px;
-          text-transform: uppercase;
           letter-spacing: 2px;
-          color: #047857;
+          color: #fbbf24;
           font-weight: 600;
         }
 
         .mission-title {
           font-size: clamp(32px, 4vw, 44px);
-          font-weight: 700;
+          font-weight: 800;
           margin: 18px 0 26px;
-          color: #064e3b;
+          background: linear-gradient(to right, #facc15, #22c55e);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
 
         .divider {
-          width: 90px;
-          height: 3px;
-          background: #f59e0b;
-          margin-bottom: 40px;
+          width: 100px;
+          height: 4px;
+          background: linear-gradient(to right, #facc15, #22c55e);
+          margin-bottom: 35px;
+          border-radius: 2px;
         }
 
         .mission-text {
           font-size: 17px;
           line-height: 1.9;
-          color: #065f46;
+          color: #e5e7eb;
         }
 
         .mission-text p {
@@ -104,12 +135,19 @@ const MissionStatement = () => {
         }
 
         .mission-text strong {
-          color: #92400e;
+          color: #facc15;
+        }
+
+        /* ✨ HOVER EFFECT */
+        .mission-highlight:hover {
+          transform: scale(1.02);
+          transition: 0.4s ease;
+          box-shadow: 0 40px 100px rgba(0,0,0,0.6);
         }
 
         @media (max-width: 768px) {
           .mission-highlight {
-            padding: 45px 30px;
+            padding: 40px 25px;
           }
         }
       `}</style>

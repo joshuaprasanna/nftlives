@@ -1,4 +1,4 @@
-// EventsSection.js
+// src/Church/EventsSection.js
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaChurch, FaCalendarAlt, FaCross, FaPray } from 'react-icons/fa';
@@ -36,128 +36,172 @@ const events = [
 
 const EventsSection = () => {
   return (
-    <section
-      style={{
-        padding: '120px 24px',
-        background:
-          'linear-gradient(180deg, #fffaf0 0%, #fef6e8 50%, #ffffff 100%)',
-        textAlign: 'center',
-      }}
-    >
-      {/* SECTION HEADER */}
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
+    <section className="events-section">
+
+      {/* 🌈 BACKGROUND */}
+      <div className="bg"></div>
+
+      {/* HEADER */}
+      <motion.div
+        className="header"
+        initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        style={{
-          fontSize: '3rem',
-          fontWeight: 700,
-          color: '#8b5a00',
-          marginBottom: '10px',
-          fontFamily: 'Georgia, serif',
-        }}
+        transition={{ duration: 1 }}
       >
-        Upcoming Events
-      </motion.h2>
+        <h2>✨ Upcoming Events</h2>
+        <p>
+          Stay connected and be a part of our church life through worship,
+          prayer, and fellowship gatherings.
+        </p>
+      </motion.div>
 
-      <p
-        style={{
-          maxWidth: '650px',
-          margin: '0 auto 70px',
-          fontSize: '1.05rem',
-          color: '#6b5b3e',
-          lineHeight: 1.7,
-        }}
-      >
-        Stay connected and be a part of our church life through these
-        upcoming worship services and fellowship events.
-      </p>
-
-      {/* EVENTS GRID */}
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-          gap: '36px',
-          maxWidth: '1100px',
-          margin: '0 auto',
-        }}
-      >
+      {/* GRID */}
+      <div className="grid">
         {events.map((event, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 30 }}
+            className="card"
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.15 }}
-            viewport={{ once: true }}
-            whileHover={{ y: -8 }}
-            style={{
-              background:
-                'linear-gradient(145deg, #ffffff, #fdf5e6)',
-              borderRadius: '22px',
-              padding: '32px 26px 36px',
-              boxShadow:
-                '0 22px 45px rgba(140,100,30,0.18)',
-            }}
+            transition={{ delay: index * 0.2 }}
+            whileHover={{ y: -10, scale: 1.03 }}
           >
             {/* ICON */}
-            <div
-              style={{
-                width: '72px',
-                height: '72px',
-                borderRadius: '50%',
-                margin: '0 auto 18px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                background:
-                  'linear-gradient(135deg, #d4a017, #f5d76e)',
-                color: '#ffffff',
-                fontSize: '28px',
-                boxShadow:
-                  '0 10px 25px rgba(180,130,30,0.4)',
-              }}
-            >
-              {event.icon}
-            </div>
+            <div className="icon">{event.icon}</div>
 
-            {/* TITLE */}
-            <h3
-              style={{
-                fontSize: '1.35rem',
-                color: '#4a2c00',
-                marginBottom: '6px',
-                fontWeight: 600,
-              }}
-            >
-              {event.title}
-            </h3>
-
-            {/* DATE */}
-            <p
-              style={{
-                fontSize: '0.9rem',
-                fontWeight: 600,
-                color: '#a67c00',
-                marginBottom: '14px',
-              }}
-            >
-              {event.date}
-            </p>
-
-            {/* DESCRIPTION */}
-            <p
-              style={{
-                fontSize: '0.95rem',
-                color: '#5f4b32',
-                lineHeight: 1.7,
-              }}
-            >
-              {event.description}
-            </p>
+            <h3>{event.title}</h3>
+            <p className="date">{event.date}</p>
+            <p className="desc">{event.description}</p>
           </motion.div>
         ))}
       </div>
+
+      {/* 🎨 STYLES */}
+      <style>{`
+
+        .events-section {
+          position: relative;
+          padding: 120px 20px;
+          overflow: hidden;
+          font-family: 'Poppins', sans-serif;
+        }
+
+        /* 🌈 BACKGROUND */
+        .bg {
+          position: absolute;
+          width: 200%;
+          height: 200%;
+          top: -50%;
+          left: -50%;
+          background: linear-gradient(
+            270deg,
+            #fde68a,
+            #fbcfe8,
+            #bbf7d0,
+            #bfdbfe
+          );
+          background-size: 600% 600%;
+          animation: moveBg 18s ease infinite;
+          opacity: 0.35;
+        }
+
+        @keyframes moveBg {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+
+        /* HEADER */
+        .header {
+          text-align: center;
+          max-width: 700px;
+          margin: 0 auto 70px;
+          position: relative;
+          z-index: 2;
+        }
+
+        .header h2 {
+          font-size: 40px;
+          font-weight: 800;
+          background: linear-gradient(to right, #f59e0b, #ec4899);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-bottom: 10px;
+        }
+
+        .header p {
+          color: #555;
+          line-height: 1.7;
+        }
+
+        /* GRID */
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          gap: 30px;
+          max-width: 1100px;
+          margin: auto;
+          position: relative;
+          z-index: 2;
+        }
+
+        /* CARD */
+        .card {
+          background: rgba(255,255,255,0.75);
+          backdrop-filter: blur(14px);
+          border-radius: 22px;
+          padding: 32px 24px 36px;
+          text-align: center;
+          box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+          transition: 0.4s ease;
+        }
+
+        .card:hover {
+          box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+        }
+
+        /* ICON */
+        .icon {
+          width: 75px;
+          height: 75px;
+          border-radius: 50%;
+          margin: 0 auto 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 28px;
+          color: #fff;
+          background: linear-gradient(135deg, #f59e0b, #ec4899);
+          box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        .card h3 {
+          font-size: 18px;
+          color: #1e1b4b;
+          margin-bottom: 6px;
+        }
+
+        .date {
+          font-size: 14px;
+          font-weight: 600;
+          color: #f59e0b;
+          margin-bottom: 12px;
+        }
+
+        .desc {
+          font-size: 14px;
+          color: #555;
+          line-height: 1.6;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+          .header h2 {
+            font-size: 28px;
+          }
+        }
+
+      `}</style>
     </section>
   );
 };
