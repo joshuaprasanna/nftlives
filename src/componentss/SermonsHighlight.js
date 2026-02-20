@@ -5,19 +5,19 @@ import { motion } from 'framer-motion';
 const sermons = [
   {
     title: 'The Power of Faith',
-    speaker: 'Pastor John',
+    //speaker: 'Pastor John',
     date: 'July 20, 2025',
     videoUrl: 'https://www.youtube.com/embed/xrXpWrVag0A',
   },
   {
     title: 'Walking in Grace',
-    speaker: 'Pastor Grace',
+   // speaker: 'Pastor Grace',
     date: 'July 13, 2025',
     videoUrl: 'https://www.youtube.com/embed/6iUW8KiPL3g',
   },
   {
     title: 'Hope in Hard Times',
-    speaker: 'Pastor David',
+    // speaker: 'Pastor David',
     date: 'July 6, 2025',
     videoUrl: 'https://www.youtube.com/embed/NGTQRtnDcQo',
   },
