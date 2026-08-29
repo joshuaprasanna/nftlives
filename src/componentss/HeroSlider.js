@@ -4,6 +4,24 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
 const slides = [
+  //   {
+  //   image: '/images/pillalu5.jpeg',
+  //   heading: 'Welcome to',
+  //   title: 'New Foundation Trust',
+  //   subtitle: 'Serving God • Serving People • Transforming Lives',
+  // },
+  //   {
+  //   image: '/images/pillalu4.jpeg',
+  //   heading: 'Welcome to',
+  //   title: 'New Foundation Trust',
+  //   subtitle: 'Serving God • Serving People • Transforming Lives',
+  // },
+   {
+    image: '/images/pillalu3.jpeg',
+    heading: 'Welcome to',
+    title: 'New Foundation Trust',
+    subtitle: 'Serving God • Serving People • Transforming Lives',
+  },
   {
     image: '/images/pillalu.jpg',
     heading: 'Welcome to',
