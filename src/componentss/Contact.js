@@ -41,8 +41,8 @@ export default function Contact() {
 
         <div style={styles.info}>
           <p><b>📍 Address:</b> Krishnapuram,APSP Battalion,Life gate church,Vizianagaram,535005</p>
-          <p><b>📞 Phone:</b> +91 9989298148</p>
-          <p><b>✉️ Email:</b> newfoundationtrust@email.com</p>
+          <p><b>📞 Phone:</b> +91 7989298148</p>
+          <p><b>✉️ Email:</b> jeevanjyothi.p@yahoo.com</p>
         </div>
 
         <form ref={formRef} onSubmit={sendEmail} style={styles.form}>
